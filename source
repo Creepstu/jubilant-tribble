@@ -1,0 +1,219 @@
+--{{[[((//    Skeppy doesn't want all your money, and I'm so sorry if my script is bothering your device to spectate player :(    \\))]]}}
+
+local Converted = game.CoreGui:FindFirstChild("GoodBoi")
+
+if not Converted then
+	local Converted = {
+		["_GoodBoi"] = Instance.new("ScreenGui");
+		["_Frame"] = Instance.new("Frame");
+		["_Header"] = Instance.new("Frame");
+		["_Title"] = Instance.new("TextLabel");
+		["_RunScript"] = Instance.new("ImageButton");
+		["_UICorner"] = Instance.new("UICorner");
+		["_LocalScript"] = Instance.new("LocalScript");
+		["_InfoScript"] = Instance.new("ImageButton");
+		["_UICorner1"] = Instance.new("UICorner");
+		["_LocalScript1"] = Instance.new("LocalScript");
+		["_InfoForm"] = Instance.new("Frame");
+		["_TextLabel"] = Instance.new("TextLabel");
+		["_hovers"] = Instance.new("Sound");
+		["_leaves"] = Instance.new("Sound");
+		["_clicking"] = Instance.new("Sound");
+		["_scriptconnectionhandler"] = Instance.new("LocalScript");
+	}
+
+	Converted["_GoodBoi"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Converted["_GoodBoi"].Name = "GoodBoi"
+	Converted["_GoodBoi"].Parent = game.CoreGui
+
+	Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+	Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_Frame"].BorderSizePixel = 0
+	Converted["_Frame"].Position = UDim2.new(0.876695454, 0, 0.55396831, 0)
+	Converted["_Frame"].Size = UDim2.new(0.123304561, 0, 0.158730164, 0)
+	Converted["_Frame"].Parent = Converted["_GoodBoi"]
+
+	Converted["_Header"].BackgroundColor3 = Color3.fromRGB(50.00000461935997, 50.00000461935997, 50.00000461935997)
+	Converted["_Header"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_Header"].BorderSizePixel = 0
+	Converted["_Header"].Size = UDim2.new(1, 0, 0.150000006, 0)
+	Converted["_Header"].Name = "Header"
+	Converted["_Header"].Parent = Converted["_Frame"]
+
+	Converted["_Title"].Font = Enum.Font.Ubuntu
+	Converted["_Title"].Text = "Stop it, Slender!"
+	Converted["_Title"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+	Converted["_Title"].TextScaled = true
+	Converted["_Title"].TextSize = 14
+	Converted["_Title"].TextWrapped = true
+	Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Converted["_Title"].BackgroundTransparency = 1
+	Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_Title"].BorderSizePixel = 0
+	Converted["_Title"].Size = UDim2.new(1, 0, 0.99999994, 0)
+	Converted["_Title"].Name = "Title"
+	Converted["_Title"].Parent = Converted["_Header"]
+
+	Converted["_RunScript"].Image = "rbxassetid://186819809"
+	Converted["_RunScript"].ImageColor3 = Color3.fromRGB(0, 255, 0)
+	Converted["_RunScript"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+	Converted["_RunScript"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_RunScript"].BorderSizePixel = 0
+	Converted["_RunScript"].Position = UDim2.new(0.25, 0, 0.25, 0)
+	Converted["_RunScript"].Size = UDim2.new(0.5, 0, 0.5, 0)
+	Converted["_RunScript"].Name = "RunScript"
+	Converted["_RunScript"].Parent = Converted["_Frame"]
+
+	Converted["_UICorner"].CornerRadius = UDim.new(0, 20)
+	Converted["_UICorner"].Parent = Converted["_RunScript"]
+
+	Converted["_InfoScript"].Image = "rbxassetid://9405926389"
+	Converted["_InfoScript"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+	Converted["_InfoScript"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_InfoScript"].BorderSizePixel = 0
+	Converted["_InfoScript"].Position = UDim2.new(0.0500000007, 0, 0.75, 0)
+	Converted["_InfoScript"].Size = UDim2.new(0.200000003, 0, 0.200000003, 0)
+	Converted["_InfoScript"].Name = "InfoScript"
+	Converted["_InfoScript"].Parent = Converted["_Frame"]
+
+	Converted["_UICorner1"].CornerRadius = UDim.new(0, 20)
+	Converted["_UICorner1"].Parent = Converted["_InfoScript"]
+
+	Converted["_InfoForm"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+	Converted["_InfoForm"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_InfoForm"].BorderSizePixel = 0
+	Converted["_InfoForm"].Position = UDim2.new(-2.00000072, 0, 0.5, 0)
+	Converted["_InfoForm"].Size = UDim2.new(2, 0, 0.5, 0)
+	Converted["_InfoForm"].Visible = false
+	Converted["_InfoForm"].Name = "InfoForm"
+	Converted["_InfoForm"].Parent = Converted["_Frame"]
+
+	Converted["_TextLabel"].Font = Enum.Font.Ubuntu
+	Converted["_TextLabel"].Text = "The script contains variables, a function to handle the behavior, and combines both loops into one. You can click once to reduce lag. It was recreated by a member of the iRanTooHard! group, @SKEPPY0_0MAN. Salute!"
+	Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+	Converted["_TextLabel"].TextScaled = true
+	Converted["_TextLabel"].TextSize = 14
+	Converted["_TextLabel"].TextWrapped = true
+	Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Converted["_TextLabel"].BackgroundTransparency = 1
+	Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Converted["_TextLabel"].BorderSizePixel = 0
+	Converted["_TextLabel"].Size = UDim2.new(1, 0, 1, 0)
+	Converted["_TextLabel"].ZIndex = 2
+	Converted["_TextLabel"].Parent = Converted["_InfoForm"]
+
+	Converted["_hovers"].SoundId = "rbxassetid://626181985"
+	Converted["_hovers"].Name = "hovers"
+	Converted["_hovers"].Parent = Converted["_GoodBoi"]
+
+	Converted["_leaves"].SoundId = "rbxassetid://5711733888"
+	Converted["_leaves"].Name = "leaves"
+	Converted["_leaves"].Parent = Converted["_GoodBoi"]
+
+	Converted["_clicking"].SoundId = "rbxassetid://4925151540"
+	Converted["_clicking"].Name = "clicking"
+	Converted["_clicking"].Parent = Converted["_GoodBoi"]
+
+	local fake_module_scripts = {}
+
+	local function XXTDL_fake_script()
+		local script = Instance.new("LocalScript")
+		script.Name = "LocalScript"
+		script.Parent = Converted["_RunScript"]
+		local req = require
+		local require = function(obj)
+			local fake = fake_module_scripts[obj]
+			if fake then
+				return fake()
+			end
+			return req(obj)
+		end
+
+		script.Parent.MouseButton1Click:Connect(function()
+			local WS = game:GetService("Workspace")
+			local PS = game:GetService("Players")
+			local Map = WS:WaitForChild("MAP")
+			local P = Map:WaitForChild("Pages")
+			local HPS = Map:WaitForChild("HPageSpawns")
+			local CH = PS.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+
+			local function moveToTransparentParts(partList)
+				for _, v in pairs(partList:GetChildren()) do
+					if v:IsA("Part") and v.Transparency == 0 then
+						repeat
+							wait()
+							CH.CFrame = CFrame.new(v.Position)
+						until v.Transparency == 1
+					end
+				end
+			end
+
+			moveToTransparentParts(P)
+			moveToTransparentParts(HPS)
+
+		end)
+	end
+	local function XRKXMLS_fake_script()
+		local script = Instance.new("LocalScript")
+		script.Name = "LocalScript"
+		script.Parent = Converted["_InfoScript"]
+		local req = require
+		local require = function(obj)
+			local fake = fake_module_scripts[obj]
+			if fake then
+				return fake()
+			end
+			return req(obj)
+		end
+
+		local enable = false
+		script.Parent.MouseButton1Click:Connect(function()
+			if enable == false then
+				enable = true
+				script.Parent.Parent.InfoForm.Visible = true
+			else
+				enable = false
+				script.Parent.Parent.InfoForm.Visible = false
+			end
+		end)
+	end
+	local function DVLI_fake_script()
+		local script = Instance.new("LocalScript")
+		script.Name = "scriptconnectionhandler"
+		script.Parent = Converted["_GoodBoi"]
+		local req = require
+		local require = function(obj)
+			local fake = fake_module_scripts[obj]
+			if fake then
+				return fake()
+			end
+			return req(obj)
+		end
+
+		local pg = game.CoreGui.GoodBoi
+
+		local function playSound(sound)
+			script.Parent[sound]:Play()
+		end
+
+		for _, v in pairs(pg:GetDescendants()) do
+			if v:IsA('TextButton') or v:IsA('ImageButton') then
+				v.MouseEnter:Connect(function()
+					playSound("hovers")
+				end)
+
+				v.MouseLeave:Connect(function()
+					playSound("leaves")
+				end)
+
+				v.MouseButton1Click:Connect(function()
+					playSound("clicking")
+				end)
+			end
+		end
+	end
+
+	coroutine.wrap(XXTDL_fake_script)()
+	coroutine.wrap(XRKXMLS_fake_script)()
+	coroutine.wrap(DVLI_fake_script)()
+end
